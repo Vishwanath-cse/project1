@@ -1,0 +1,61 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Noto Sans Kannada', sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:
+linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),
+url("redyello.jpg");
+background-size:cover;
+background-position:center;
+color:rgb(234, 12, 12);
+}
+
+header{
+text-align:center;
+background:rgba(0,0,0,0.7);
+padding:15px;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+gap:25px;
+list-style:none;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+font-size:18px;
+transition:0.3s;
+}
+
+nav a:hover{
+color:#ffcc00;
+}
+
+.section{
+padding:60px;
+text-align:center;
+}
+/* SLIDER */
+
+.slider{
+width:80%;
+max-width:800px;
+margin:40px auto;
+position:relative;
+overflow:hidden;
+border-radius:12px;
+box-shadow:0 10px 25px rgba(0,0,0,0.5);
+}
+
+.slide{
+width:100%;
+display:none;
+}

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="kn">
+
+<head>
+<title>ಚಿತ್ರಗಳು</title>
+<link rel="stylesheet" href="style.css">
+
+<style>
+.slider{
+  width:500px;
+  margin:auto;
+  text-align:center;
+}
+
+.slide{
+  width:100%;
+  display:none;
+}
+
+button{
+  padding:10px 20px;
+  margin:10px;
+  font-size:16px;
+  cursor:pointer;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1 style="text-align:center;" color="yellow";>ಚಿತ್ರಗಳು</h1>
+
+<div class="slider">
+<img src="main.png.jpeg" class="slide">
+<img src="pic1.png.jpeg" class="slide">
+<img src="pic2.png.jpeg" class="slide">
+<img src="pic13.jpeg" class="slide">
+<img src="pic22.jpeg" class="slide">
+
+<br>
+
+<button onclick="prevSlide()">◀ Previous</button>
+<button onclick="nextSlide()">Next ▶</button>
+
+</div>
+
+<script>
+
+let index = 0;
+showSlides(index);
+
+function showSlides(n){
+
+let slides = document.getElementsByClassName("slide");
+
+if(n >= slides.length){
+index = 0;
+}
+
+if(n < 0){
+index = slides.length - 1;
+}
+
+for(let i = 0; i < slides.length; i++){
+slides[i].style.display = "none";
+}
+
+slides[index].style.display = "block";
+
+}
+
+function nextSlide(){
+index++;
+showSlides(index);
+}
+
+function prevSlide(){
+index--;
+showSlides(index);
+}
+
+
+</script>
+
+</body>
+</html>
